@@ -1,0 +1,13 @@
+package org.cahucadi.reto;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class EvalartRetoApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
