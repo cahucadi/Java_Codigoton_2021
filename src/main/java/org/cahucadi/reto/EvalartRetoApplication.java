@@ -1,7 +1,6 @@
 package org.cahucadi.reto;
 
-import org.cahucadi.reto.domain.ClientAdapter;
-import org.cahucadi.reto.service.RetoService;
+import org.cahucadi.reto.service.EvalartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class EvalartRetoApplication  implements CommandLineRunner {
 
-	@Autowired RetoService servicio;
+	@Autowired EvalartService service;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(EvalartRetoApplication.class, args);
@@ -18,7 +17,7 @@ public class EvalartRetoApplication  implements CommandLineRunner {
 	
 	@Override
     public void run(String... args) throws Exception {	
-		servicio.execute();
+		service.execute();
 	}
 
 }

@@ -9,10 +9,12 @@ import javax.persistence.PostLoad;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import org.hibernate.annotations.ColumnTransformer;
-
 import lombok.Data;
 
+/**
+ * @author cahuc
+ *
+ */
 @Entity
 @Table(name = "client")
 @Data
@@ -68,6 +70,9 @@ public class Client implements Comparable<Client> {
     		this.decodedCode = this.code;
     }
 
+	/**
+	 * overrided method for Collection ordering
+	 */
 	@Override
 	public int compareTo(Client that) {
 
