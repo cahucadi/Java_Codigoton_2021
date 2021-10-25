@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class FileReaderUtil {
 
@@ -22,9 +23,9 @@ public class FileReaderUtil {
 	    
 	}
 
-	public static HashMap<String, HashMap<String, String>> loadFileContent(String fileName) throws Exception {
+	public static TreeMap<String, HashMap<String, String>> loadFileContent(String fileName) throws Exception {
 
-		HashMap<String, HashMap<String, String>> result = new HashMap<String, HashMap<String, String>>();
+		TreeMap<String, HashMap<String, String>> result = new TreeMap<String, HashMap<String, String>>();
 
 		List<String> linesList = readFile(fileName);
 		

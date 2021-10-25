@@ -16,7 +16,7 @@ import lombok.Data;
 @Entity
 @Table(name = "client")
 @Data
-public class Client {
+public class Client implements Comparable<Client> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -67,6 +67,19 @@ public class Client {
     	else
     		this.decodedCode = this.code;
     }
+
+	@Override
+	public int compareTo(Client that) {
+
+		if (this.getTotalBalance() < that.getTotalBalance()) {
+			return 1;
+		}else if(this.getTotalBalance() > that.getTotalBalance()) {
+			return -1;
+		}else {
+			return this.getDecodedCode().compareTo(that.getDecodedCode());
+		}
+		
+	}
     
     
 	
